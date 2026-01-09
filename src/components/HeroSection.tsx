@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
 ];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-20 overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border))_1px,transparent_1px)] bg-[size:60px_60px] opacity-20" />
       
@@ -18,6 +18,7 @@ const HeroSection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
+        {/* Avatar */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -25,52 +26,57 @@ const HeroSection = () => {
           className="mb-8"
         >
           <div className="relative inline-block">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 p-1 glow-primary">
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                <span className="text-5xl md:text-6xl">👨‍💻</span>
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 p-1.5 glow-primary">
+              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
+                  alt="GitHub Octocat"
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                />
               </div>
-            </div>
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-sm">✓</span>
             </div>
           </div>
         </motion.div>
 
+        {/* Name and Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-gradient">John Doe</span>
+            <span className="text-gradient">John Developer</span>
           </h1>
-          <p className="font-mono text-primary text-lg mb-4">@johndoe</p>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            Full Stack Developer | Open Source Enthusiast
+          </p>
         </motion.div>
 
-        <motion.p
+        {/* CTA Buttons */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-6"
+          className="flex items-center justify-center gap-4 flex-wrap mb-8"
         >
-          Full-stack developer passionate about building open-source tools 
-          and crafting beautiful web experiences. Turning coffee into code since 2018.
-        </motion.p>
+          <Button variant="hero" size="xl" asChild>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Github className="w-5 h-5" />
+              GitHub Profile
+            </a>
+          </Button>
+          <Button variant="heroOutline" size="xl" asChild>
+            <a href="#projects">
+              View Projects
+            </a>
+          </Button>
+        </motion.div>
 
+        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex items-center justify-center gap-2 text-muted-foreground mb-8"
-        >
-          <MapPin className="w-4 h-4" />
-          <span>San Francisco, CA</span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
           className="flex items-center justify-center gap-4"
         >
           {socialLinks.map((link) => (
@@ -79,33 +85,12 @@ const HeroSection = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-xl bg-secondary hover:bg-primary/10 hover:border-glow transition-all duration-300 group"
+              className="p-3 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               aria-label={link.label}
             >
-              <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <link.icon className="w-6 h-6" />
             </a>
           ))}
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center justify-center gap-8 mt-12 pt-8 border-t border-border"
-        >
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-foreground">24</p>
-            <p className="text-sm text-muted-foreground font-mono">Repositories</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-foreground">1.2k</p>
-            <p className="text-sm text-muted-foreground font-mono">Followers</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-foreground">342</p>
-            <p className="text-sm text-muted-foreground font-mono">Following</p>
-          </div>
         </motion.div>
       </div>
     </section>

@@ -60,18 +60,21 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="px-6 py-16">
+    <section id="projects" className="px-6 py-20 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-3 mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-2xl font-bold text-foreground">Popular Repositories</h2>
-          <span className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono">
-            {projects.length}
-          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A collection of open-source projects I've built and contributed to
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
