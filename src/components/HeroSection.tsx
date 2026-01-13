@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/basil-okata-515b1836b", label: "LinkedIn" },
-    { icon: Twitter, href: user?.twitter_username ? `https://twitter.com/@BazMyster}` : "https://twitter.com", label: "Twitter" },
+    { icon: Twitter, href: user?.twitter_username ? `https://twitter.com/@BazMyster}` : "https://twitter.com/@BazMyster", label: "Twitter" },
     { icon: Mail, href: user?.email ? `mailto:${user.email}` : "mailto:basilokata@gmail.com", label: "Email" },
   ];
 
