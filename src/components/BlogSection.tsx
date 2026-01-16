@@ -3,35 +3,35 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
-    title: "Building Scalable React Applications with Clean Architecture",
-    excerpt: "Learn how to structure your React projects for maintainability and scalability using clean architecture principles.",
+    title: "Building My Home Lab with MikroTik RB5009UPr+S+IN",
+    excerpt: "How I set up a professional-grade home network using the MikroTik RB5009UPr+S+IN router, complete with VLANs, firewall rules, and network segmentation for hands-on CCNA practice.",
+    date: "Jan 10, 2026",
+    readTime: "15 min read",
+    category: "Networking",
+    url: "#",
+  },
+  {
+    title: "Setting Up Pi-hole for Network-Wide Ad Blocking",
+    excerpt: "A complete guide to deploying an adblock server on your home network, filtering ads and trackers at the DNS level for all connected devices.",
     date: "Jan 5, 2026",
-    readTime: "8 min read",
-    category: "React",
-    url: "#",
-  },
-  {
-    title: "A Deep Dive into TypeScript Generics",
-    excerpt: "Master TypeScript generics with practical examples and real-world use cases that will level up your code.",
-    date: "Dec 28, 2025",
-    readTime: "12 min read",
-    category: "TypeScript",
-    url: "#",
-  },
-  {
-    title: "Optimizing Node.js APIs for High Performance",
-    excerpt: "Discover techniques to boost your Node.js API performance including caching, connection pooling, and more.",
-    date: "Dec 15, 2025",
     readTime: "10 min read",
-    category: "Node.js",
+    category: "Home Lab",
+    url: "#",
+  },
+  {
+    title: "CCNA Journey: From Theory to Hands-On Practice",
+    excerpt: "My experience taking the CCNA course and how running a home lab with real networking hardware accelerated my learning and practical skills.",
+    date: "Dec 20, 2025",
+    readTime: "12 min read",
+    category: "Networking",
     url: "#",
   },
 ];
 
 const categoryColors: Record<string, string> = {
-  React: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-  TypeScript: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  "Node.js": "bg-green-500/10 text-green-400 border-green-500/20",
+  Networking: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  "Home Lab": "bg-green-500/10 text-green-400 border-green-500/20",
+  AWS: "bg-orange-500/10 text-orange-400 border-orange-500/20",
 };
 
 const BlogSection = () => {
@@ -49,7 +49,7 @@ const BlogSection = () => {
             Blog Posts
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Sharing knowledge and insights from my journey as a developer
+            Sharing insights from my networking journey, home lab experiments, and IT expertise
           </p>
         </motion.div>
 
