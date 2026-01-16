@@ -68,10 +68,10 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                <span className="text-gradient">{user?.name || user?.login || "Developer"}</span>
+                <span className="text-gradient">{user?.name || "Basil (Waswani) Okata"}</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                {user?.bio || "Full Stack Developer | Open Source Enthusiast"}
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                AWS Certified Cloud Practitioner | Network & Systems Administrator | Cloud & Cybersecurity Expert | ICT Support Specialist
               </p>
             </motion.div>
 
