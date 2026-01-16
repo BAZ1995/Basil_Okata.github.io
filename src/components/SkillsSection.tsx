@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React / Next.js", level: 95, color: "bg-cyan-500" },
-  { name: "TypeScript", level: 90, color: "bg-blue-500" },
-  { name: "Node.js", level: 88, color: "bg-green-500" },
-  { name: "Python", level: 75, color: "bg-yellow-500" },
-  { name: "PostgreSQL", level: 82, color: "bg-violet-500" },
-  { name: "Docker / DevOps", level: 70, color: "bg-orange-500" },
+  { name: "IT Support & Troubleshooting", level: 95, color: "bg-cyan-500" },
+  { name: "Network & System Administration", level: 92, color: "bg-blue-500" },
+  { name: "Cloud Computing (AWS)", level: 88, color: "bg-orange-500" },
+  { name: "Cybersecurity Fundamentals", level: 85, color: "bg-red-500" },
+  { name: "Application Deployment", level: 82, color: "bg-green-500" },
+  { name: "ICT Asset Management", level: 90, color: "bg-violet-500" },
 ];
 
 const technologies = [
-  { name: "React", icon: "⚛️" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Node.js", icon: "🟢" },
-  { name: "Python", icon: "🐍" },
-  { name: "PostgreSQL", icon: "🐘" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "Docker", icon: "🐳" },
   { name: "AWS", icon: "☁️" },
-  { name: "Git", icon: "📦" },
-  { name: "GraphQL", icon: "◈" },
-  { name: "Redis", icon: "🔴" },
-  { name: "Tailwind", icon: "🎨" },
+  { name: "Citrix Workspace", icon: "🖥️" },
+  { name: "Windows Server", icon: "🪟" },
+  { name: "Linux", icon: "🐧" },
+  { name: "Active Directory", icon: "🔐" },
+  { name: "Network Security", icon: "🛡️" },
+  { name: "Hardware Maintenance", icon: "🔧" },
+  { name: "VPN/Firewall", icon: "🔥" },
+  { name: "Help Desk", icon: "🎧" },
+  { name: "ITIL", icon: "📋" },
+  { name: "Virtualization", icon: "📦" },
+  { name: "Backup & Recovery", icon: "💾" },
 ];
 
 const SkillsSection = () => {
@@ -39,7 +39,7 @@ const SkillsSection = () => {
             Skills & Technologies
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I work with on a daily basis
+            Core competencies and technologies I leverage to deliver reliable IT solutions
           </p>
         </motion.div>
 
